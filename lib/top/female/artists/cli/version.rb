@@ -1,9 +1,7 @@
-module Top
-  module Female
-    module Artists
-      module Cli
-        VERSION = "0.1.0"
-      end
-    end
-  end
+module TopFemaleArtists
+    VERSION = "0.1.0"
+    
 end
+    
+  
+
