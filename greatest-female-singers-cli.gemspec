@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 
 Gem::Specification.new do |spec|
-  spec.name          = 'top-female-artists-cli'
-  spec.version       = TopFemaleArtists::VERSION
+  spec.name          = 'greatest-female-singers-cli'
+  spec.version       = GreatestFemaleSingers::VERSION
   spec.authors       = ["'Mary Arbachauskas'"]
   spec.email         = ["'mary.arbachauskas@gmail.com'"]
 
-  spec.summary       = "Top Female Artists CLI"
+  spec.summary       = "Top Ten Greatest Female Singers CLI"
   spec.description   = "This Ruby Gem provides a CLI to view the top ten female artists as per the IMDB website."
   spec.homepage      = "https://www.imdb.com/list/ls005303343/"
   spec.license       = "MIT"
