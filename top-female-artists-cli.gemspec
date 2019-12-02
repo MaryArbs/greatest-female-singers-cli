@@ -1,11 +1,11 @@
-require "top/female/artists/cli/version"
+
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 
 Gem::Specification.new do |spec|
-  spec.name          = "top-female-artists-cli"
-  spec.version       = TopFemaleArtistsCli::VERSION
+  spec.name          = 'top-female-artists-cli'
+  spec.version       = TopFemaleArtists::VERSION
   spec.authors       = ["'Mary Arbachauskas'"]
   spec.email         = ["'mary.arbachauskas@gmail.com'"]
 

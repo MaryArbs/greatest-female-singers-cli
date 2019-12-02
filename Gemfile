@@ -1,4 +1,6 @@
 source "https://rubygems.org"
+gem 'top-female-artists-cli'
+require 'pry'
 
 # ruby
 # gem 'top-female-artists-cli'
