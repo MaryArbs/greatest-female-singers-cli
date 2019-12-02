@@ -1,4 +1,0 @@
-module TopFemaleArtists
-  
-end
-
