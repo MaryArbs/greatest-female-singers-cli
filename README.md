@@ -1,13 +1,13 @@
-## Top Female Artists 
+## Greatest Female Singers 
 
-This Ruby Gem provides a CLI to view the top ten female artists as per the IMDB website.
+This Ruby Gem provides a CLI to view the top ten greatest female singers as per the IMDB website.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'top-female-artists-cli'
+gem 'greatest-female-singers-cli'
 ```
 
 And then execute:
@@ -16,13 +16,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install top-female-artists-cli
+    $ gem install greatest-female-singers-cli
 
 ## Usage
 
 Type the below and follow the on screen prompts.
 
-    $ top-female-artists-cli
+    $ greatest-female-singers-cli
 
 ## Development
 
