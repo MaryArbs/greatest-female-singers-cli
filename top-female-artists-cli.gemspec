@@ -5,13 +5,13 @@ require "top/female/artists/cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "top-female-artists-cli"
-  spec.version       = Top::Female::Artists::Cli::VERSION
+  spec.version       = TopFemaleArtistsCLI::VERSION
   spec.authors       = ["'Mary Arbachauskas'"]
   spec.email         = ["'mary.arbachauskas@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Top Female Artists CLI"
+  spec.description   = "This Ruby Gem provides a CLI to view the top ten female artists as per the IMDB website."
+  spec.homepage      = "https://www.imdb.com/list/ls005303343/"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
