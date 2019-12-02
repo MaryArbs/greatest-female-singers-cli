@@ -1,6 +1,6 @@
 ## Greatest Female Singers 
 
-This Ruby Gem provides a CLI to view the top ten greatest female singers as per the IMDB website.
+This Ruby Gem provides a CLI to view the top ten greatest female singers as per the IMDb website.
 
 ## Installation
 
@@ -40,4 +40,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Top::Female::Artists::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'observant-lambda-6809'/top-female-artists-cli/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Top::Female::Artists::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'observant-lambda-6809'/greatest-female-singers-cli/blob/master/CODE_OF_CONDUCT.md).
