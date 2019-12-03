@@ -5,13 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'greatest-female-singers-cli'
-  spec.version       = GreatestFemaleSingers::VERSION
+  spec.version       =  "0.1.0"                                   #GreatestFemaleSingers::VERSION
   spec.authors       = ["'Mary Arbachauskas'"]
   spec.email         = ["'mary.arbachauskas@gmail.com'"]
 
   spec.summary       = "Top Ten Greatest Female Singers CLI"
   spec.description   = "This Ruby Gem provides a CLI to view the top ten female artists as per the IMDB website."
-  spec.homepage      = "https://www.imdb.com/list/ls005303343/"
+  spec.homepage      = "https://github.com/MaryArbs/greatest-female-singers-cli"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/MaryArbs/greatest-female-singers-cli"
     spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
   else
     raise "RubyGems 2.0 or newer is required to protect against " \

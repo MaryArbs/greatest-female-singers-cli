@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem 'greatest-female-singers-cli'
+# gem 'greatest-female-singers-cli'
 # require 'pry'
 
 # ruby
