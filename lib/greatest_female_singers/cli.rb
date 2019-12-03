@@ -1,4 +1,4 @@
-require 'open-uri'
+ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
@@ -28,9 +28,31 @@ class CLI
     # when 'exit'
       # exit 
     
-  else 
+    else 
     puts "Please make a choice."
   
+  end 
+  
+  def guess_singer
+  end 
+  
+  def list_singers
+    puts "Here are the top ten greatest female singers!"
+    Singer.all.each.with_index(1) do |singer, idex|
+      puts "#{idex}. #{singer.name}"
+    
+    puts "Enter a number 1-#{Singer.all.size} to find out more about a singer."
+    input = gets.chomp.to_i
+    
+    if valid_input(input)
+      puts "Cool! Let's learn more!"
+    else 
+      puts "Try again. You need to enter a number 1-10."
+      input = gets.chomp.to_i
+    end
+    
+  def valid_input(input)
+    input.between?(1,Singer.all.size)
   end 
   
 

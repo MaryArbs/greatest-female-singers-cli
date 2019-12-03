@@ -1,4 +1,4 @@
-class Singers
+class Singer
   
   attr_accessor :name, :birthday, :age, :born_in, :bio, :trademark, :url 
   @@all = []
