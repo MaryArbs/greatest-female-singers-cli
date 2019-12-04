@@ -17,7 +17,7 @@ class CLI
     input = ""
     while input != "exit"
     
-    puts "Welcome to Greatest Female Singers of all time!"
+    puts "Welcome to Greatest Female Singers Of All Time!"
     puts  "Who do YOU think is the greatest female singer of all time?"
     puts  "To choose Diana Ross, type 'Diana Ross'."
     puts  "To choose Tina Turner, type 'Tina Turner'."
