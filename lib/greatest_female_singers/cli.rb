@@ -9,7 +9,7 @@ class CLI
     input = ""
     while input != "exit"
     
-    puts "Welcome to Top Ten Greatest Female Singers!"
+    puts "Welcome to Greatest Female Singers of all time!"
     puts "To guess the number one greatest female singer, enter 'guess singer'."
     puts "To see the list of top ten greatest female singers, enter 'list singers'."
     puts "To quit, type 'exit'."
@@ -29,7 +29,7 @@ class CLI
       # exit 
     
     else 
-    puts "Please make a choice."
+     puts "Please make a choice."
   
   end 
   
@@ -37,7 +37,7 @@ class CLI
   end 
   
   def list_singers
-    puts "Here are the top ten greatest female singers!"
+    puts "Here are the greatest female singers!"
     Singer.all.each.with_index(1) do |singer, idex|
       puts "#{idex}. #{singer.name}"
     

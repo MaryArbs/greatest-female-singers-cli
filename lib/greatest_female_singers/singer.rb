@@ -3,7 +3,7 @@ class Singer
   attr_accessor :name, :birthday, :age, :born_in, :bio, :trademark, :url 
   @@all = []
   
-  def initialize(name, birthday, age, url)
+  def initialize(name=nil, birthday=nil, age=nil, urlgit=nil)
     @name = name
     @birthday = birthday 
     @age = age 
@@ -18,4 +18,3 @@ class Singer
   def save
     @@all << self
   end
-end 

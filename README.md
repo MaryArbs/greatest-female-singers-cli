@@ -1,6 +1,6 @@
 ## Greatest Female Singers 
 
-This Ruby Gem provides a CLI to view the top ten greatest female singers as per the IMDb website.
+This Ruby Gem provides a CLI to view the greatest female singers as per the IMDb website.
 
 ## Installation
 

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'mary.arbachauskas@gmail.com'"]
 
   spec.summary       = "Top Ten Greatest Female Singers CLI"
-  spec.description   = "This Ruby Gem provides a CLI to view the top ten female artists as per the IMDB website."
+  spec.description   = "This Ruby Gem provides a CLI to view the top female singers as per the IMDb website."
   spec.homepage      = "https://github.com/MaryArbs/greatest-female-singers-cli"
   spec.license       = "MIT"
 
