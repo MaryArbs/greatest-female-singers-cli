@@ -10,6 +10,7 @@ class GreatestFemaleSingers::CLI
     
    puts "Welcome to Greatest Female Singers Of All Time!"
    Scraper.scrape_singers
+   
     
     input = ""
     while input != "exit"

@@ -10,6 +10,7 @@ class GreatestFemaleSingers::Scraper
    list_of_singers = doc.css("h3.lister-item-header")
    list_of_singers.each.with_index(1) {|section, index| 
     puts  "#{index}." + section.css('a').text}
+    binding.pry
     
     list_of_singers = Singer.new 
   end 
