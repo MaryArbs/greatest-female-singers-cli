@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
+require '..lib/greatest_female_singers.rb'
 
 class GreatestFemaleSingers::CLI 
   
