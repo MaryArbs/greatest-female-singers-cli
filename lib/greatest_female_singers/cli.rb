@@ -10,31 +10,48 @@ class CLI
     while input != "exit"
     
     puts "Welcome to Greatest Female Singers of all time!"
-    puts "To guess the number one greatest female singer, enter 'guess singer'."
-    puts "To see the list of top ten greatest female singers, enter 'list singers'."
-    puts "To quit, type 'exit'."
-    puts "So, what will it be?"
+    puts  "Who do YOU think is the greatest female singer of all time?"
+    puts  "To choose Diana Ross, type 'Diana Ross'."
+    puts  "To choose Tina Turner, type 'Tina Turner'."
+    puts  "To choose Aretha Frankling, type 'Aretha Franklin'."
+    puts  "To choose Whitney Houston, type 'Whiteney Houston'. "
     
     input gets.strip 
     
     case input 
     
-    when 'guess singer'
-      guess_singer
+    when 'Diana Ross'
+      diana_ross
     
+    when 'Tina Turner'
+      tina_turner
+     
+    when 'Aretha Franklin'
+       aretha_franklin
+    
+    when 'Whitney Houston'
+      whitney_houston
+   
     when 'list singers'
       list_singers
       
-    # when 'exit'
-      # exit 
-    
-    else 
-     puts "Please make a choice."
+     else 
+      puts "Please make a choice."
   
   end 
   
-  def guess_singer
+  def diana_ross
+  end
+  
+  def tina_turner
   end 
+  
+  def aretha_franklin
+  end 
+  
+  def whitney_houston
+  end 
+end 
   
   def list_singers
     puts "Here are the greatest female singers!"
