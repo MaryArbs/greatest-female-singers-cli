@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
+require '..lib/greatest_female_singers.rb'
 
 class GreatestFemaleSingers::Scraper
   
@@ -12,6 +13,5 @@ class GreatestFemaleSingers::Scraper
     puts  "#{index}." + section.css('a').text}
     binding.pry
     
-    list_of_singers = Singer.new 
   end 
 end 
