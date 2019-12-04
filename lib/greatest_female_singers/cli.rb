@@ -2,17 +2,14 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
-class CLI
+class GreatestFemaleSingers::CLI 
   
-  def run 
-   site = "https://www.imdb.com/list/ls064792627/"
-   doc = Nokogiri::HTML(open(site))
-   list_of_singers = doc.css("h3.lister-item-header")
-   list_of_singers.each.with_index(1) {|section, index| 
-    puts  "#{index}." + section.css('a').text}
-  end 
+
   
-  def call 
+  def call
+    
+   puts "Welcome to Greatest Female Singers Of All Time!"
+   Scraper.scrape_singers
     
     input = ""
     while input != "exit"
@@ -70,7 +67,7 @@ end
   
   def whitney_houston
     if input == 'Whitney Houston'
-      return "Although I agree with you that she is the best singer ever, this answer is not correct!"
+      return "Even though I agree with you that she is the best singer ever, this answer is not correct!"
       binding.pry
     end 
   end 

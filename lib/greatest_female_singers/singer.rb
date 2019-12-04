@@ -1,11 +1,12 @@
-class Singer
+class GreatestFemaleSingers::Singer
   
   attr_accessor :name, :birthday, :age, :born_in, :bio, :trademark, :url 
   
   @@all = []
   
-  def initialize(name)
+  def initialize(name, url)
     @name = name
+    @url = url 
     self.save 
   end 
   
