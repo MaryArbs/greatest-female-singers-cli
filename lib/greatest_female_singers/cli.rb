@@ -4,6 +4,14 @@ require 'pry'
 
 class CLI
   
+  def run 
+   site = "https://www.imdb.com/list/ls064792627/"
+   doc = Nokogiri::HTML(open(site))
+   list_of_singers = doc.css("h3.lister-item-header")
+   list_of_singers.each.with_index(1) {|section, index| 
+    puts  "#{index}." + section.css('a').text}
+  end 
+  
   def call 
     
     input = ""
