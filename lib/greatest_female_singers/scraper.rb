@@ -1,4 +1,4 @@
-raprequire 'open-uri'
+require 'open-uri'
 require 'nokogiri'
 require 'pry'
 require_relative '../greatest_female_singers.rb'
@@ -16,7 +16,7 @@ class GreatestFemaleSingers::Scraper
     profile_url = "https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd"
     singer_info = {:list_of_singers => "name", :profile_url => "profile_url"}
     singers << singer_info
-  
+    
   end 
     
 
@@ -24,9 +24,22 @@ class GreatestFemaleSingers::Scraper
     singer_hash = {} 
     site = ("https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd")
     doc = Nokogiri::HTML(open(site))
+    born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces 
+    bio = doc.css('#name-bio-text div').text.strip  # need to get rid of more spaces here 
+    trade_mark = doc.css ("div #dyk-trademark") #will not let me do .text (hr tag?)
+    nick_name = doc.css ("div #dyk-nickname")
+    
+   
+    
+    
+    
+   
+    
+   
+    
     
   end 
 end 
 
-# GreatestFemaleSingers::Scraper.scrape_index_url
+# GreatestFemaleSingers::Scraper.scrape_index_page
 

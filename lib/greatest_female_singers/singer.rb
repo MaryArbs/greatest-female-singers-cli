@@ -1,6 +1,6 @@
 class GreatestFemaleSingers::Singer
   
-  attr_accessor :name, :born, :bio, :trademark, :profile_url 
+  attr_accessor :name, :born, :bio, :trademark, :nick_name :profile_url 
   
   @@all = []
   
