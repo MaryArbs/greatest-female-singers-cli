@@ -26,8 +26,10 @@ class GreatestFemaleSingers::Scraper
     doc = Nokogiri::HTML(open(site))
     born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces 
     bio = doc.css('#name-bio-text div').text.strip  # need to get rid of more spaces here 
-    trade_mark = doc.css ("div #dyk-trademark") #will not let me do .text (hr tag?)
-    nick_name = doc.css ("div #dyk-nickname")
+    trademark = doc.css ("div #dyk-trademark") #will not let me do .text (hr tag?)
+    nickname = doc.css ("div #dyk-nickname")
+    GreatestFemaleSingers::Singer.new(ame, born, bio, trademark, nickname, profile_url)
+    
     
    
     
