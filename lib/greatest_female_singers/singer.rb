@@ -1,6 +1,6 @@
 class GreatestFemaleSingers::Singer
   
-  attr_accessor :name, :born, :bio, :trademark, :nickname :profile_url 
+  attr_accessor :name, :born, :bio, :trademark, :nickname, :profile_url 
   
   @@all = []
   
@@ -23,6 +23,6 @@ class GreatestFemaleSingers::Singer
      @@all      # allows access to the @@all variable 
   end
   
-  def 
+end 
 
   

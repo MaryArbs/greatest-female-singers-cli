@@ -26,24 +26,15 @@ class GreatestFemaleSingers::Scraper
     site = ("https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd")
     doc = Nokogiri::HTML(open(site))
     born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces 
+    binding.pry
     bio = doc.css('#name-bio-text div').text.strip  # need to get rid of more spaces here 
     trademark = doc.css ("div #dyk-trademark") #will not let me do .text (hr tag?)
     nickname = doc.css ("div #dyk-nickname")
     #Use a find_by_name to retrieve the artist, and then set all their attributes 
     GreatestFemaleSingers::Singer.new(ame, born, bio, trademark, nickname, profile_url)
     
-    
-   
-    
-    
-    
-   
-    
-   
-    
-    
-  end 
+    end 
 end 
 
-# GreatestFemaleSingers::Scraper.scrape_index_page
+GreatestFemaleSingers::Scraper.scrape_singer_info("Whitney Houston")
 
