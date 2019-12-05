@@ -13,7 +13,6 @@ require_relative '../lib/greatest_female_singers/cli.rb'
 
 
 
-module GreatestFemaleSingers
-  
-end
-
+# module GreatestFemaleSingers
+#
+# end
