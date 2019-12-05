@@ -5,8 +5,7 @@ class GreatestFemaleSingers::Singer
   @@all = []
   
   def initialize(singer_hash)
-    # singer_hash.each {|attribute, value| self.send(("#{attribute}="), value)} 
-    # #iterating through the student_hash attributes, assinging each attribute method(setter method) a value- (self=instance of singer)
+   
      @name = name 
      @born = born
      @trademark = trademark
@@ -21,6 +20,14 @@ class GreatestFemaleSingers::Singer
   
   def self.all
      @@all      # allows access to the @@all variable 
+  end
+  
+   def self.find_by_index(index)
+    @@all[index]
+  end
+
+  def self.find_by_name(name)
+    self.all.detect { |singer| singer.name == name }
   end
   
 end 
