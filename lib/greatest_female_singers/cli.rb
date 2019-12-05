@@ -8,8 +8,10 @@ class GreatestFemaleSingers::CLI
 
   
   def call
-    
     puts "Welcome to the top 50 Greatest Female Singers!"
+    list_singers 
+    user_input
+    display_singer_info
   end 
   
   def list_singers
