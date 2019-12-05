@@ -1,7 +1,7 @@
-require 'open-uri'
+raprequire 'open-uri'
 require 'nokogiri'
 require 'pry'
-require '..lib/greatest_female_singers.rb'
+require_relative '../greatest_female_singers.rb'
 
 class GreatestFemaleSingers::Scraper
   
@@ -16,25 +16,17 @@ class GreatestFemaleSingers::Scraper
     profile_url = "https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd"
     singer_info = {:list_of_singers => "name", :profile_url => "profile_url"}
     singers << singer_info
-  end 
-  singers 
-    
-  # list_of_singers = doc.css("h3.lister-item-header")
-  # list_of_singers.each.with_index(1) {|section, index| 
-  #   puts  "#{index}." + section.css('a').text}
-  #   singers << list_of_singer
-  #   url = section.css ('a')[0]['href']
-  # end 
   
-  def self.scrape_profile_page (profile_url)
+  end 
+    
+
+  def self.scrape_singer_info(singer_obj) # how do access ^ profile_url?? 
+    singer_hash = {} 
+    site = ("https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd")
+    doc = Nokogiri::HTML(open(site))
     
   end 
 end 
 
- #main > div > div.lister.list.detail.sub-list > div.lister-list > div:nth-child(1) > div.lister-item-content > h3 > a
- #main > div > div.lister.list.detail.sub-list > div.lister-list > div:nth-child(2) > div.lister-item-content > h3 > a
- 
- <a href="/name/nm0291349?ref_=nmls_hd"> Aretha Franklin
-</a>
-<a href="/name/nm0291349?ref_=nmls_hd"> Aretha Franklin
-</a>
+# GreatestFemaleSingers::Scraper.scrape_index_url
+

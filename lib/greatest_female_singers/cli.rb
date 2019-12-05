@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
-require '..lib/greatest_female_singers.rb'
+require_relative '../greatest_female_singers.rb'
 
 class GreatestFemaleSingers::CLI 
   
@@ -10,7 +10,7 @@ class GreatestFemaleSingers::CLI
   def call
     
    puts "Welcome to Greatest Female Singers Of All Time!"
-   Scraper.scrape_singers
+   Scraper.scrape_index_url
    
     
     input = ""
