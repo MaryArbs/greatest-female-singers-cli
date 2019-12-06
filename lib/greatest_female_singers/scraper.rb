@@ -20,13 +20,14 @@ class Scraper
    end
 
  def self.scrape_singer_info(singer_obj)
-    site = ("https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd")
-      doc = Nokogiri::HTML(open(site))
-      born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces
-      bio = doc.css('#name-bio-text div').text.strip
+  site = open(singer_obj.profile_url)
+  doc = Nokogiri::HTML(open(site))
+  singer_obj.born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces
+  singer_obj.bio = doc.css('#name-bio-text div').text.strip
      # need to get rid of more spaces here
       # trademark = doc.css ("div#dyk-trademark").children[1].text
-      nickname = doc.css("div#dyk-nickname").children[2].text
+  singer_obj.nickname = doc.css("div#dyk-nickname").children[2].text
+
 
       #Use a find_by_name to retrieve the artist, and then set all their attributes
   end
