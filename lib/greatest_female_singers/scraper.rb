@@ -7,7 +7,7 @@ class Scraper
 
 
   def self.scrape_list_of_singers
-  artst_base_url = "http://imdb.com"
+  artist_base_url = "http://imdb.com"
    site = "https://www.imdb.com/list/ls064792627/"
    doc = Nokogiri::HTML(open(site))
    singer_list = doc.css("h3.lister-item-header")
@@ -15,6 +15,7 @@ class Scraper
     name = section.css('a').text
     profile_url = artist_base_url + section.css('a').attribute('href')
     Singer.new(name, profile_url)
+
   end
 
  end
@@ -33,4 +34,4 @@ class Scraper
   end
  end
 # scraper = Scraper.new
- Scraper.scrape_list_of_singers
+ # Scraper.scrape_list_of_singers

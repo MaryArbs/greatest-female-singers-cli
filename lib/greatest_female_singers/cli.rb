@@ -13,34 +13,51 @@ class CLI
     Scraper.scrape_list_of_singers
     list_singers
     user_input
+    valid_input
+    scrape_and_display_singer_name
     display_singer_info
   end
 
-  def list_singers
+  def display_list_of_singers
     puts "Here are the top 50 Greatest Female Singers according to IMdb!"
     Singer.print_with_index
-  end
+    binding.pry
+   end
 
   def user_input(input)
     input = ""
     while input != "exit"
-    puts "Please choose a number to learn more about a singer, if you would like to exit the program type 'exit'."
-    input gets.strip.to_i
-   end
+    puts "Please choose a number between 1- #{Singer.all.size}to learn more about a one of these awesome Singers."
+    input = gets.chomp.to_i
+    until valid_input(input)
+      puts "Please try again. Choose a number 1-50."
+      input = gets.chomp.to_i
+     end
+    end
+   puts "Cool! Let's learn more!"
+  end
+
+  def valid_input(input)
+    input.between?(1, Singer.all.size)
+  end
+
+  def scrape_and_display_singer_name(input)
+    singer = Singer.all [input - 1]
+    Scraper.scrape_list_of_singers
   end
 
   def display_singer_info (singer_obj)
     puts "Let's take a closer look at the singer you chose!"
     Scraper.scrape_singer_info(singer_obj)
     puts name: + "#{singer_obj.name}"
-    puts born: + "#{singer.born}"
-    puts bio:  + "#{singer.bio}"
-    puts trademark: + "#{singer.trademark}"
-    puts nickname: + "#{singer.nickname}"
-
-
-  end
+    puts born: + "#{singer_obj.born}"
+    puts bio:  + "#{singer_obj.bio}"
+    puts trademark: + "#{singer_obj.trademark}"
+    puts nickname: + "#{singer_obj.nickname}"
+    binding.pry
+ end
  end
 
-# scraper = CLI.new
-CLI.new.list_singers
+
+CLI.new.display_list_of_singers
+# CLI.new.display_singer_info("Aretha Franklin")

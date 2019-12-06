@@ -25,12 +25,14 @@ class Singer
   end
 
   def self.print_with_index
-    self.all.each_with_index do ||
-  end
+    self.all.each.with_index(1) do |singer, index|
+      puts "#{index}. + #{singer.name}"
+    end
+end
 
    def self.find_by_index(index)
-    self.all.detect{|index|
-    }
+    self.all.find {|index|
+      singer.index==index}
   end
 
   # def self.find_by_name_and_index(name,index)
@@ -39,5 +41,4 @@ class Singer
   # end
 
 end
-
-# Singer.find_by_name("Whitney Houston")
+# Singer.print_with_index
