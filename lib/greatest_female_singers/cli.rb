@@ -1,7 +1,7 @@
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
-require_relative '../greatest_female_singers.rb'
+# require 'open-uri'
+# require 'nokogiri'
+# require 'pry'
+# require_relative '../greatest_female_singers.rb'
 
 
 class CLI
@@ -63,4 +63,4 @@ class CLI
 # CLI.new.display_list_of_singers
 # CLI.new.user_input(input)
 # CLI.new.display_singer_info("Aretha Franklin")
-CLI.new.call
+# CLI.new.call
