@@ -10,6 +10,7 @@ class CLI
 
  def call
     puts "Welcome to the top 50 Greatest Female Singers!"
+    Scraper.scrape_list_of_singers
     list_singers
     user_input
     display_singer_info
@@ -17,9 +18,7 @@ class CLI
 
   def list_singers
     puts "Here are the top 50 Greatest Female Singers according to IMdb!"
-    Scraper.scrape_index_page
-
-
+    Singer.print_with_index
   end
 
   def user_input(input)
@@ -31,17 +30,17 @@ class CLI
   end
 
   def display_singer_info (singer_obj)
-    puts "Let's take a closer look!"
+    puts "Let's take a closer look at the singer you chose!"
     Scraper.scrape_singer_info(singer_obj)
-    puts name: + "#{singer.name}"
+    puts name: + "#{singer_obj.name}"
     puts born: + "#{singer.born}"
     puts bio:  + "#{singer.bio}"
     puts trademark: + "#{singer.trademark}"
     puts nickname: + "#{singer.nickname}"
-    binding.pry
+
 
   end
  end
 
-scraper = CLI.new
-scraper.display_singer_info("Whitney Houston")
+# scraper = CLI.new
+CLI.new.list_singers
