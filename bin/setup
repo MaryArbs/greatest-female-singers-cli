@@ -1,4 +1,4 @@
-require '..lib/greatest_female_singers.rb'
+# require '..lib/greatest_female_singers.rb'
 
 #!/usr/bin/env bash
 set -euo pipefail
@@ -8,4 +8,3 @@ set -vx
 bundle install
 
 # Do any other automated setup that you need to do here
-
