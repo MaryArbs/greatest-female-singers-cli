@@ -11,7 +11,8 @@ class CLI
  def call
     puts "Welcome to the top 50 Greatest Female Singers!"
     Scraper.scrape_list_of_singers
-    list_singers
+
+    display_list_of_singers
     user_input
     valid_input
     scrape_and_display_singer_name
@@ -25,18 +26,18 @@ class CLI
 
   def user_input(input)
     input = ""
-    while input != "exit"
+  while input != "exit"
     puts "Please choose a number between 1- #{Singer.all.size}to learn more about a one of these awesome Singers."
     input = gets.chomp.to_i
-    until valid_input(input)
+
+    if valid_input?(input)
       puts "Please try again. Choose a number 1-50."
       input = gets.chomp.to_i
      end
-     end
-    puts "Cool! Let's learn more!"
+    end
    end
 
-  def valid_input(input)
+  def valid_input?(input)
     input.between?(1, Singer.all.size)
   end
 
@@ -61,5 +62,7 @@ class CLI
  end
 
 
-CLI.new.display_list_of_singers
+# CLI.new.display_list_of_singers
+# CLI.new.user_input(input)
 # CLI.new.display_singer_info("Aretha Franklin")
+CLI.new.call
