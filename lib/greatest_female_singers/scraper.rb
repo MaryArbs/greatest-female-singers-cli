@@ -15,14 +15,10 @@ class Scraper
     name = section.css('a').text
     profile_url = artist_base_url + section.css('a').attribute('href')
     Singer.new(name, profile_url)
+    end
+   end
 
-  end
-
- end
-
-
-
-  def self.scrape_singer_info(singer_obj)
+ def self.scrape_singer_info(singer_obj)
     site = ("https://www.imdb.com" + "/name/nm0291349?ref_=nmls_hd")
       doc = Nokogiri::HTML(open(site))
       born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces

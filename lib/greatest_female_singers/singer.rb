@@ -28,17 +28,10 @@ class Singer
     self.all.each.with_index(1) do |singer, index|
       puts "#{index}. + #{singer.name}"
     end
-end
-
-   def self.find_by_index(index)
-    self.all.find {|index|
-      singer.index==index}
   end
 
-  # def self.find_by_name_and_index(name,index)
-  #   self.all.detect { |singer, index|| singer.name == name }
-  #   binding.pry
-  # end
-
+ def self.find_by_index(index)
+     @@all[index]
+ end
 end
 # Singer.print_with_index
