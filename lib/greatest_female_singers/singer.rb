@@ -34,4 +34,3 @@ class Singer
      @@all[index]
  end
 end
-# Singer.print_with_index

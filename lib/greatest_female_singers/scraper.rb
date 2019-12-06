@@ -27,11 +27,5 @@ class Scraper
      # need to get rid of more spaces here
       # trademark = doc.css ("div#dyk-trademark").children[1].text
   singer_obj.nickname = doc.css("div#dyk-nickname").children[2].text
-
-
-      #Use a find_by_name to retrieve the artist, and then set all their attributes
-  end
  end
-# scraper = Scraper.new
- # Scraper.scrape_list_of_singers
- # Scraper.scrape_singer_info("Aretha Franklin")
+end

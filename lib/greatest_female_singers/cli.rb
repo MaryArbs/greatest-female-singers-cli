@@ -13,8 +13,6 @@ class CLI
     Scraper.scrape_list_of_singers
     display_list_of_singers
     singer = user_input
-    # valid_input(input) #not needed here
-    # singer = scrape_and_display_singer_name(input)
     display_singer_info (singer)
   end
 
@@ -28,7 +26,7 @@ class CLI
       input = gets.chomp.to_i
      until valid_input?(input)
        puts "Try again."
-     input = gets.chomp.to_i
+     input = gets.chomp.to_i #send user back to line 24
      end
       Singer.find_by_index(input.to_i - 1)
       #return singer object
@@ -37,11 +35,6 @@ class CLI
     def valid_input?(input)
       input.between?(1, Singer.all.size)
     end
-
-    # def user_choice(input)
-    # Singer.find_by_index(input.to_i - 1)
-    # end
-
 
   def display_singer_info (singer_obj)
     puts "Let's take a closer look at the singer you chose!"
@@ -58,9 +51,3 @@ class CLI
 
    end
  end
-
-
-# CLI.new.display_list_of_singers
-# CLI.new.user_input(input)
-# CLI.new.display_singer_info("Aretha Franklin")
-# CLI.new.call
