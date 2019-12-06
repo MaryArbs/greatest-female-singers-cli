@@ -5,7 +5,7 @@ require_relative '../greatest_female_singers.rb'
 
 class Scraper
 
-  def scrape_index_page
+  def self.scrape_index_page
    site = "https://www.imdb.com/list/ls064792627/"
    doc = Nokogiri::HTML(open(site))
    singers = []
@@ -16,8 +16,8 @@ class Scraper
     singer_info = {:list_of_singers => "name", :profile_url => "profile_url"}
     singers << singer_info
 
-    Singer.new(name, profile_url)
-    binding.pry
+    # Singer.new(name, profile_url) #causing an error
+
 
 
   end
@@ -36,5 +36,5 @@ class Scraper
 
  end
 end
-scraper = Scraper.new
- scraper.scrape_index_page
+# scraper = Scraper.new
+#  scraper.scrape_index_page
