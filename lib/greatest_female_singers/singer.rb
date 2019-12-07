@@ -1,11 +1,12 @@
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
-require_relative '../greatest_female_singers.rb'
+# require 'open-uri'
+# require 'nokogiri'
+# require 'pry'
+# require_relative '../greatest_female_singers.rb'
 
 class Singer
 
   attr_accessor :name, :born, :bio, :trademark, :nickname, :profile_url
+
 
   @@all = []
 

@@ -12,7 +12,7 @@ class Scraper
    doc = Nokogiri::HTML(open(site))
    singer_list = doc.css("h3.lister-item-header")
    singer_list.each do |section|
-    name = section.css('a').text
+    name = section.css('a').text.delete("\n")
     profile_url = artist_base_url + section.css('a').attribute('href')
     Singer.new(name, profile_url)
     end
@@ -22,10 +22,9 @@ class Scraper
  def self.scrape_singer_info(singer_obj)
   site = open(singer_obj.profile_url)
   doc = Nokogiri::HTML(open(site))
-  singer_obj.born = doc.css("div #name-born-info").text.strip.gsub("\n", "")  #need to get rif of extra white spaces
+  singer_obj.born = doc.css("div #name-born-info").text.strip.gsub("\n", "").delete("\n")  #need to get rif of extra white spaces
   singer_obj.bio = doc.css('#name-bio-text div').text.strip
-     # need to get rid of more spaces here
-      # trademark = doc.css ("div#dyk-trademark").children[1].text
-  singer_obj.nickname = doc.css("div#dyk-nickname").children[2].text
+  singer_obj.trademark = doc.css("div#dyk-trademark").text.strip.gsub("Trademark:", "").delete("\n")
+  singer_obj.nickname = doc.css("div#dyk-nickname").text.strip.gsub("Nickname:", "").delete("\n")
  end
 end

@@ -39,15 +39,18 @@ class CLI
   def display_singer_info (singer_obj)
     puts "Let's take a closer look at the singer you chose!"
     Scraper.scrape_singer_info(singer_obj)
-    puts name: + "#{singer_obj.name}"
+    puts "Name: #{singer_obj.name}"
     puts ""
-    puts born: + "#{singer_obj.born}"
+    puts "#{singer_obj.born}"
     puts ""
-    puts bio:  + "#{singer_obj.bio}"
+    puts  " Bio: #{singer_obj.bio}"
     puts ""
-    puts trademark: + "#{singer_obj.trademark}"
+    puts  " Trademark: #{singer_obj.trademark}"
     puts ""
-    puts nickname: + "#{singer_obj.nickname}"
+    puts  "Nickname: #{singer_obj.nickname}"
+    puts ""
+    puts ""
+    puts ""
 
    end
  end
