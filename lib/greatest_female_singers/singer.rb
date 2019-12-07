@@ -11,7 +11,6 @@ class Singer
   @@all = []
 
   def initialize(name, profile_url)
-
      @name = name
      @profile_url = profile_url
      save
