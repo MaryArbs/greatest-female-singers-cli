@@ -1,8 +1,3 @@
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
-require_relative '../greatest_female_singers.rb'
-
 class Scraper
 
 

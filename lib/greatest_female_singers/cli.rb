@@ -1,9 +1,3 @@
-# require 'open-uri'
-# require 'nokogiri'
-# require 'pry'
-# require_relative '../greatest_female_singers.rb'
-
-
 class CLI
 
   attr_accessor :user_input
@@ -48,23 +42,23 @@ class CLI
     puts ""
     puts ""
     more_info
-
-   end
+ end
 
    def more_info
-     puts "Would you like to choose another singer? Enter 'y' or 'n'."
+    input = nil
+    while input != 'exit'
+     puts "Would you like like to choose another singer?"
+     puts "To look at the list of singers again, enter 'list'."
+     puts "To leave the program enter 'exit'."
+     puts "So, what will it be?"
      input = gets.chomp
 
-     if input == "n" || "N"
+     case input
+     when 'list'
+       call
+     when 'exit'
        exit
-     else
-       puts "Please try again."
-       input = gets.chomp
-     end
-
-     if
-     input == "y" || "Y"
-      call
      end
    end
  end
+end
