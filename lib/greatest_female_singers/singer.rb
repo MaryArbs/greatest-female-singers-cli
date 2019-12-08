@@ -13,6 +13,7 @@ class Singer
   def initialize(name, profile_url)
      @name = name
      @profile_url = profile_url
+     @nickname = "No nickname."
      save
   end
 
@@ -22,6 +23,10 @@ class Singer
 
   def self.all
      @@all
+  end
+
+  def nickname
+    @nickname
   end
 
   def self.print_with_index

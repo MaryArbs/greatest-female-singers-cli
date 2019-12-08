@@ -18,8 +18,8 @@ class Scraper
   site = open(singer_obj.profile_url)
   doc = Nokogiri::HTML(open(site))
   singer_obj.born = doc.css("div #name-born-info").text.strip.gsub("\n", "").delete("\n")  #need to get rif of extra white spaces
-  singer_obj.bio = doc.css('#name-bio-text div').text.strip
-  singer_obj.trademark = doc.css("div#dyk-trademark").text.strip.gsub("Trademark:", "").delete("\n")
-  singer_obj.nickname = doc.css("div#dyk-nickname").text.strip.gsub("Nickname:", "").delete("\n")
+  singer_obj.bio = doc.css('#name-bio-text div div').text.strip.gsub("See full bio", "").gsub(">>", "").delete "\n"
+  singer_obj.trademark = doc.css("div#dyk-trademark").text.rstrip.gsub("Trademark:", "").gsub("See more", "").lstrip.delete "\n"
+  singer_obj.nickname = doc.css("div#dyk-nickname").text.rstrip.gsub("Nickname:", "").gsub("See more", "").gsub(">>", "").lstrip.delete "\n"
  end
 end
