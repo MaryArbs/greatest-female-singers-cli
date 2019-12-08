@@ -33,7 +33,7 @@ class CLI
     puts ""
     puts "Name: #{singer_obj.name}"
     puts ""
-    puts " #{singer_obj.born}"
+    puts "Born: #{singer_obj.born}"
     puts ""
     puts "Bio: #{singer_obj.bio}"
     puts ""
