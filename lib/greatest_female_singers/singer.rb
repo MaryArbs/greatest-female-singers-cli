@@ -1,8 +1,3 @@
-# require 'open-uri'
-# require 'nokogiri'
-# require 'pry'
-# require_relative '../greatest_female_singers.rb'
-
 class Singer
 
   attr_accessor :name, :born, :bio, :trademark, :nickname, :profile_url
@@ -10,10 +5,11 @@ class Singer
 
   @@all = []
 
-  def initialize(name, profile_url)
+  def initialize(name, profile_url50)
      @name = name
      @profile_url = profile_url
-     @nickname = "No nickname."
+     @nickname = "Unknown nickname."
+     @trademark = "Unknown trademark"
      save
   end
 
@@ -23,10 +19,6 @@ class Singer
 
   def self.all
      @@all
-  end
-
-  def nickname
-    @nickname
   end
 
   def self.print_with_index
