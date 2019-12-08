@@ -7,9 +7,15 @@ class CLI
      puts "Welcome, friends!"
      Scraper.scrape_list_of_singers
      singer_quiz
-     display_list_of_singers
-     display_singer_info (user_input)
-     more_info
+    #  display_list_of_singers
+    #  display_singer_info (user_input)
+    #  more_info
+   end
+
+   def start
+      display_list_of_singers
+      display_singer_info (user_input)
+      more_info
    end
 
    def singer_quiz
@@ -17,30 +23,28 @@ class CLI
      puts "Quiz time! Who do you think is the top female singer of all time?"
      puts "1. Diana Ross"
      puts "2. Whitney Houston"
-     puts "3. Aretha Franklin"
+     puts "3. Mariah Carey"
      puts "4. Tina Turner"
-     puts "5. Mariah Carey"
+     puts "5. Aretha Franklin"
      puts "Enter a number 1-5."
-     until input.to_i > 0  && input.to_i < 6
-
-     input = gets.chomp.to_i
-     case input
-     when "1"
-       puts "Close, but no cigar!"
-     when "2"
-       puts "Although I agree she is number 1, this is not correct."
-     when "3"
-       puts "WOOHO, you got it!"
-     when "4"
-       puts "Cloe, but no cigar!."
-     when "5"
-       puts "Close, but no cigar!"
-     when "6"
-       display_list_of_singers
-       display_singer_info (user_input)
-     end
+     input = gets.chomp
+      if input == "1"
+      puts "Close, but no cigar!"
+      if input == "2"
+      puts "Close, but no cigar!"
+      if input == "3"
+      puts "Close, but no cigar!"
+      if input == "4"
+      puts "Close, but no cigar!"
+      if input == "5"
+      puts "WOOHOO! You got it!"
+    elsif
+      puts "Please try agian."
+      end
+      start
+      end
    end
- end
+
 
    def display_list_of_singers
      puts "Here are the top 50 Greatest Female Singers according to IMdb!"
@@ -78,8 +82,7 @@ class CLI
      puts ""
      puts ""
      more_info
-
-  end
+    end
 
     def more_info
      input = nil
@@ -98,5 +101,5 @@ class CLI
         exit
       end
       end
-    end
- end
+     end
+  end
