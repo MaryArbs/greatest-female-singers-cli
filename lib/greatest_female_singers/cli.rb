@@ -35,6 +35,7 @@ class CLI
       puts "I agree she is the BEST, but still no.".red
      elsif input == "5"
       puts "WOOHOO! You got it!".blue
+      start
     else
       singer_quiz
     end
