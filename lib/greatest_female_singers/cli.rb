@@ -19,7 +19,7 @@ class CLI
     input = nil
     puts "Quiz time! Who do you think is the top female singer of all time?"
     puts "1. Diana Ross"
-    puts "2. Whitney Houston"
+    puts "2. Tina Turner"
     puts "3. Mariah Carey"
     puts "4. Tina Turner"
     puts "5. Aretha Franklin"
