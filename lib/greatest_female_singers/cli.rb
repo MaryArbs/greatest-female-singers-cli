@@ -19,31 +19,43 @@ class CLI
    end
 
    def singer_quiz
-     input = nil
-     puts "Quiz time! Who do you think is the top female singer of all time?"
-     puts "1. Diana Ross"
-     puts "2. Whitney Houston"
-     puts "3. Mariah Carey"
-     puts "4. Tina Turner"
-     puts "5. Aretha Franklin"
-     puts "Enter a number 1-5."
-     input = gets.chomp
-      if input == "1"
+    input = nil
+    puts "Quiz time! Who do you think is the top female singer of all time?"
+    puts "1. Diana Ross"
+    puts "2. Whitney Houston"
+    puts "3. Mariah Carey"
+    puts "4. Tina Turner"
+    puts "5. Aretha Franklin"
+    puts "Enter a number 1-5."
+    input = gets.chomp
+     if input == "1"
       puts "Close, but no cigar!"
-      if input == "2"
+     elsif input == "2"
       puts "Close, but no cigar!"
-      if input == "3"
+    elsif input == "3"
       puts "Close, but no cigar!"
-      if input == "4"
+    elsif input == "4"
       puts "Close, but no cigar!"
-      if input == "5"
+     elsif input == "5"
       puts "WOOHOO! You got it!"
-    elsif
-      puts "Please try agian."
-      end
-      start
-      end
-   end
+    else
+      singer_quiz
+    end
+  try_again
+ end
+
+def try_again
+  puts "Would you like to try again or see the list of singers?"
+  puts "To try again enter, 'y'."
+  puts "To see the list of singers enter, 'list'."
+  input = gets.chomp
+  case input
+  when 'y'
+    singer_quiz
+  when 'list'
+    start
+  end
+end
 
 
    def display_list_of_singers
@@ -66,7 +78,7 @@ class CLI
        input.between?(1, Singer.all.size)
    end
 
-  def display_singer_info (user_input)
+  def display_singer_info (singer_obj)
      puts "Let's take a closer look at the singer you chose!"
      Scraper.scrape_singer_info(singer_obj)
      puts ""
@@ -93,13 +105,13 @@ class CLI
       puts "So, what will it be?"
       input = gets.chomp
 
-      case input
+     case input
       when 'list'
         display_list_of_singers
         display_singer_info (user_input)
       when 'exit'
         exit
       end
-      end
      end
+    end
   end

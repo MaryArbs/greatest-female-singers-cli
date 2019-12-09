@@ -8,8 +8,6 @@ class Singer
   def initialize(name, profile_url)
      @name = name
      @profile_url = profile_url
-     @nickname = "Unknown nickname."
-     @trademark = "Unknown trademark"
      save
   end
 
