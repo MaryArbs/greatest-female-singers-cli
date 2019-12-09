@@ -34,7 +34,7 @@ class CLI
     elsif input == "4"
       puts "I agree she is the BEST, but still no.".red
      elsif input == "5"
-      puts "WOOHOO! You got it!".red
+      puts "WOOHOO! You got it!".blue
     else
       singer_quiz
     end
@@ -114,6 +114,6 @@ end
     end
 
     def see_you
-      puts "Thanks for coming, see you soon!".light_blue
+      puts "Thank you for coming, see you soon!".blue
     end
   end
