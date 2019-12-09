@@ -4,13 +4,10 @@ class CLI
 
 
   def call
-     puts "Welcome, friends!"
+     puts "Welcome, friends!".green
      Scraper.scrape_list_of_singers
      singer_quiz
-    #  display_list_of_singers
-    #  display_singer_info (user_input)
-    #  more_info
-   end
+  end
 
    def start
       display_list_of_singers
@@ -29,22 +26,22 @@ class CLI
     puts "Enter a number 1-5."
     input = gets.chomp
      if input == "1"
-      puts "Close, but no cigar!"
+      puts "Close, but no.".red
      elsif input == "2"
-      puts "Close, but no cigar!"
+      puts "Close, but no.".red
     elsif input == "3"
-      puts "Close, but no cigar!"
+      puts "Close, but no.".red
     elsif input == "4"
-      puts "Close, but no cigar!"
+      puts "I agree she is the BEST, but still no.".red
      elsif input == "5"
-      puts "WOOHOO! You got it!"
+      puts "WOOHOO! You got it!".red
     else
       singer_quiz
     end
   try_again
  end
 
-def try_again
+ def try_again
   puts "Would you like to try again or see the list of singers?"
   puts "To try again enter, 'y'."
   puts "To see the list of singers enter, 'list'."
@@ -59,12 +56,12 @@ end
 
 
    def display_list_of_singers
-     puts "Here are the top 50 Greatest Female Singers according to IMdb!"
+     puts "Here are the top 50 Greatest Female Singers according to IMdb!".green
      Singer.print_with_index
    end
 
   def user_input
-     puts "Please choose a number between 1- #{Singer.all.size} to learn more about a one of these awesome Singers."
+     puts "Please choose a number between 1- #{Singer.all.size} to learn more about a one of these awesome Singers.".green
        input = gets.chomp.to_i
      until valid_input?(input)
         puts "Please try again. Select a number 1-50."
@@ -79,7 +76,7 @@ end
    end
 
   def display_singer_info (singer_obj)
-     puts "Let's take a closer look at the singer you chose!"
+     puts "Let's take a closer look at the singer you chose!".green
      Scraper.scrape_singer_info(singer_obj)
      puts ""
      puts "Name:#{singer_obj.name}"
@@ -99,7 +96,7 @@ end
     def more_info
      input = nil
      while input != 'exit'
-      puts "Would you like like to choose another singer?"
+      puts "Would you like like to choose another singer?".green
       puts "To look at the list of singers again, enter 'list'."
       puts "To leave the program enter 'exit'."
       puts "So, what will it be?"
@@ -110,8 +107,13 @@ end
         display_list_of_singers
         display_singer_info (user_input)
       when 'exit'
+        see_you
         exit
       end
      end
+    end
+
+    def see_you
+      puts "Thanks for coming, see you soon!".light_blue
     end
   end
