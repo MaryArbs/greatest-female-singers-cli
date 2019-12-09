@@ -1,3 +1,4 @@
+module GreatestFemaleSingers
 class Scraper
 
 
@@ -31,3 +32,4 @@ class Scraper
      end
     end
    end
+ end

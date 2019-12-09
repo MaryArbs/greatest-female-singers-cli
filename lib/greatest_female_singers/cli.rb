@@ -1,11 +1,13 @@
-class CLI
+module GreatestFemaleSingers
+
+ class CLI
 
   attr_accessor :user_input
 
 
   def call
      puts "Welcome, friends!".green
-     Scraper.scrape_list_of_singers
+     GreatestFemaleSingers::Scraper.scrape_list_of_singers
      singer_quiz
   end
 
@@ -58,7 +60,7 @@ end
 
    def display_list_of_singers
      puts "Here are the top 50 Greatest Female Singers according to IMdb!".green
-     Singer.print_with_index
+     GreatestFemaleSingers::Singer.print_with_index
    end
 
   def user_input
@@ -68,17 +70,17 @@ end
         puts "Please try again. Select a number 1-50."
       input = gets.chomp.to_i #send user back to line 24
       end
-       Singer.find_by_index(input.to_i - 1)
+       GreatestFemaleSingers::Singer.find_by_index(input.to_i - 1)
        #return singer object
    end
 
    def valid_input?(input)
-       input.between?(1, Singer.all.size)
+       input.between?(1, GreatestFemaleSingers::Singer.all.size)
    end
 
   def display_singer_info (singer_obj)
      puts "Let's take a closer look at the singer you chose!".green
-     Scraper.scrape_singer_info(singer_obj)
+     GreatestFemaleSingers::Scraper.scrape_singer_info(singer_obj)
      puts ""
      puts "Name:#{singer_obj.name}"
      puts ""
@@ -118,3 +120,4 @@ end
       puts "Thank you for coming, see you soon!".blue
     end
   end
+end

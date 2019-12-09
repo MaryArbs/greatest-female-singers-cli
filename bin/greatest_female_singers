@@ -1,4 +1,6 @@
+#!/usr/bin/env ruby
+
 require "bundler/setup"
 require "greatest_female_singers"
 
-CLI.new.call
+GreatestFemaleSingers::CLI.new.call

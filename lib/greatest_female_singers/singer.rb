@@ -1,4 +1,5 @@
-class Singer
+module GreatestFemaleSingers
+ class Singer
 
   attr_accessor :name, :born, :bio, :trademark, :nickname, :profile_url
 
@@ -28,4 +29,5 @@ class Singer
  def self.find_by_index(index)
      @@all[index]
  end
-end
+ end
+end 
