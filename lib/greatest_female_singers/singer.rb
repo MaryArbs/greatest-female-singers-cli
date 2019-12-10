@@ -30,4 +30,4 @@ module GreatestFemaleSingers
      @@all[index]
  end
  end
-end 
+end

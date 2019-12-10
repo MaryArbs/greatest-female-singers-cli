@@ -45,7 +45,7 @@ module GreatestFemaleSingers
  end
 
  def try_again
-  puts "Would you like to try again or see the list of singers?"
+  puts "Would you like to try again or see the list of singers?".green
   puts "To try again enter, 'y'."
   puts "To see the list of singers enter, 'list'."
   input = gets.chomp
@@ -58,31 +58,31 @@ module GreatestFemaleSingers
 end
 
 
-   def display_list_of_singers
-     puts "Here are the top 50 Greatest Female Singers according to IMdb!".green
-     GreatestFemaleSingers::Singer.print_with_index
-   end
+ def display_list_of_singers
+  puts "Here are the top 50 Greatest Female Singers according to IMdb!".green
+  GreatestFemaleSingers::Singer.print_with_index
+ end
 
   def user_input
-     puts "Please choose a number between 1- #{Singer.all.size} to learn more about a one of these awesome Singers.".green
+  puts "Please choose a number between 1- #{Singer.all.size} to learn more about a one of these awesome Singers.".green
        input = gets.chomp.to_i
-     until valid_input?(input)
-        puts "Please try again. Select a number 1-50."
+    until valid_input?(input)
+      puts "Please try again. Select a number 1-50."
       input = gets.chomp.to_i #send user back to line 24
-      end
-       GreatestFemaleSingers::Singer.find_by_index(input.to_i - 1)
+    end
+    GreatestFemaleSingers::Singer.find_by_index(input.to_i - 1)
        #return singer object
    end
 
    def valid_input?(input)
-       input.between?(1, GreatestFemaleSingers::Singer.all.size)
+    input.between?(1, GreatestFemaleSingers::Singer.all.size)
    end
 
-  def display_singer_info (singer_obj)
+   def display_singer_info (singer_obj)
      puts "Let's take a closer look at the singer you chose!".green
      GreatestFemaleSingers::Scraper.scrape_singer_info(singer_obj)
      puts ""
-     puts "Name:#{singer_obj.name}"
+     puts "Name: #{singer_obj.name}"
      puts ""
      puts "Born: #{singer_obj.born}"
      puts ""
