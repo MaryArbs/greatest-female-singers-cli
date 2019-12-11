@@ -22,7 +22,7 @@ module GreatestFemaleSingers
 
   def self.print_with_index
     self.all.each.with_index(1) do |singer, index|
-      puts "#{index}. + #{singer.name}"
+      puts "#{index}. #{singer.name}"
     end
   end
 
