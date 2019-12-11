@@ -11,7 +11,7 @@ class Scraper
    singer_list.each do |section|
    name = section.css('a').text.delete("\n")
    profile_url = artist_base_url + section.css('a').attribute('href')
-   Singer.new(name, profile_url)
+    GreatestFemaleSingers::Singer.new(name, profile_url)
     end
    end
 
