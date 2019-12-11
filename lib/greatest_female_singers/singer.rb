@@ -28,7 +28,7 @@ module GreatestFemaleSingers
   end
 
  def self.find_by_index(index)
-     @@all[index]
+     @@all[index] #find singer with specified index
  end
  end
 end

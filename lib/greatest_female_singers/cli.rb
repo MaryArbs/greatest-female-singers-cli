@@ -18,10 +18,11 @@ module GreatestFemaleSingers
    def singer_quiz
     input = nil
     puts "Quiz time! Who do you think is the top female singer of all time?"
-    puts "1. Diana Ross"
-    puts "2. Tina Turner"
-    puts "3. Mariah Carey"
-    puts "4. Tina Turner"
+   quiz = Singer.all.sample(4)
+   quiz.each.with_index(1) do |singer , index|
+      puts "#{index}. #{singer.name}"
+     end
+
     puts "5. Aretha Franklin"
     puts "Enter a number 1-5."
     input = gets.chomp
