@@ -2,10 +2,8 @@ module GreatestFemaleSingers
 
  class CLI
 
-  attr_accessor :user_input
 
-
-  def call
+ def call
      puts "Welcome, friends!".green
      GreatestFemaleSingers::Scraper.scrape_list_of_singers
      singer_quiz

@@ -1,4 +1,5 @@
 module GreatestFemaleSingers
+
  class Singer
 
   attr_accessor :name, :born, :bio, :trademark, :nickname, :profile_url
